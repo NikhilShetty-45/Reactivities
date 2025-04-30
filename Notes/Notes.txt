@@ -1,0 +1,19 @@
+1) Command to create a solution Files : dotnet new sln
+2) Command to create a api folder : dotnet new webapi -n "Name" -controllers
+3) Command to create a class lib : dotnet new classlib -n "Name"
+4) Command to add libs to sln : dotnet sln add "Foldername"
+5) To load all the sdks : dotnet --info
+6) To load all the templates : dotnet new list
+
+------------------------------------------------------------------------------------------------------------------------------------------
+To add DB context
+Add miscrosoft.entityframeworkcore.sqlite to persistence
+Add miscrosoft.entityframeworkcore.design add to API
+------------------------------------------------------------------------------------------------------------------------------------------
+To install ef 
+dotnet tool install --global dotnet-ef --version 9.0.4
+dotnet ef for help
+To create ef migration
+dotnet ef migrations add InitialCreate -p Persistance -s API
+dotnet ef database update -p Perisitance -s API    
+dotnet ef database drop -p Perisitance -s API    
